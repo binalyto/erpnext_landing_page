@@ -23,8 +23,11 @@ export default function CTASection() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const API_URL = import.meta.env.VITE_N8N_WEBHOOK;
-
+    const API_URL =
+      import.meta.env.VITE_N8N_WEBHOOK ||
+      "https://n8n.binalyto.com/webhook/1f17a41d-ee6a-47d5-840c-60b960343545";
+    console.log(API_URL);
+    
     $.ajax({
       url: API_URL,
       method: "POST",

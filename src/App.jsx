@@ -15,6 +15,28 @@ import FAQSection from './components/FAQSection';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDm9r5medfsBS0Q_TC0U4xYkQXPRlArRck",
+  authDomain: "erpnext-landing-page.firebaseapp.com",
+  projectId: "erpnext-landing-page",
+  storageBucket: "erpnext-landing-page.firebasestorage.app",
+  messagingSenderId: "217962432000",
+  appId: "1:217962432000:web:068f662b23f7c6b5c83ae5",
+  measurementId: "G-PC94TJFBBH"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 function App() {
   return (
     <div className="min-h-screen bg-[#050510] text-white overflow-x-hidden">

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight, CheckCircle2, Zap } from 'lucide-react';
+import { trackClick } from '../../firebase';
 import { Toaster } from 'react-hot-toast';
 import toast from 'react-hot-toast';
 
@@ -176,6 +177,7 @@ export default function EdtechCTA() {
             </div>
             <button
               type="submit"
+              onClick={() => trackClick('cta_book_free_demo_form_submit')}
               className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3.5 rounded-lg transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 text-sm"
             >
               <Calendar size={15} />

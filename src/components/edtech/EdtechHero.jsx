@@ -4,6 +4,7 @@ import {
   MessageSquare, Phone, Globe, Smartphone,
   UserCheck, BarChart3, Bell,
 } from 'lucide-react';
+import { trackClick } from '../../firebase';
 
 const channels = [
   { icon: MessageSquare, label: 'WhatsApp',    sub: 'Instant messaging',   color: '#22c55e', ring: 'ring-green-500/20',  bg: 'bg-green-500/10'  },
@@ -96,6 +97,7 @@ export default function EdtechHero() {
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="#contact"
+                onClick={() => trackClick('hero_transform_sales_process')}
                 className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3.5 rounded-lg transition-all duration-200 shadow-lg shadow-blue-600/30 hover:shadow-blue-500/40 hover:-translate-y-0.5 text-sm"
               >
                 Transform Your Sales Process
@@ -103,6 +105,7 @@ export default function EdtechHero() {
               </a>
               <a
                 href="#sales-suite"
+                onClick={() => trackClick('hero_see_how_it_works')}
                 className="inline-flex items-center justify-center gap-1.5 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 font-semibold px-6 py-3.5 rounded-lg transition-all duration-200 text-sm"
               >
                 See How It Works

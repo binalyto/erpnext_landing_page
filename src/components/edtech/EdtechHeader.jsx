@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar } from 'lucide-react';
+import { trackClick } from '../../firebase';
 import Logo from '../../assets/logo_white.png';
 
 const navLinks = [
@@ -50,6 +51,7 @@ export default function EdtechHeader() {
 
           <a
             href="#contact"
+            onClick={() => trackClick('cta_header_book_demo')}
             className={`inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 ${
               scrolled ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
             }`}

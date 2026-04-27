@@ -15,9 +15,15 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
 
-// Helper function to keep your component code clean
 export const trackSection = (sectionName) => {
   logEvent(analytics, 'section_view', {
-    section_id: sectionName
+    section_id: sectionName,
+  });
+};
+
+export const trackClick = (buttonId, page = 'edtech') => {
+  logEvent(analytics, 'button_click', {
+    button_id: buttonId,
+    page,
   });
 };

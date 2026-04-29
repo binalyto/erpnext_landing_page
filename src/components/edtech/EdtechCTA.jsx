@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight, CheckCircle2, Zap } from 'lucide-react';
-import { trackClick } from '../../firebase';
+import { trackClick, trackGadsConversion } from '../../firebase';
 import { Toaster } from 'react-hot-toast';
 import toast from 'react-hot-toast';
 
@@ -38,6 +38,7 @@ export default function EdtechCTA() {
       contentType: 'application/json',
       data: JSON.stringify(formData),
       success: () => {
+        trackGadsConversion();
         toast.success("Message sent! We'll be in touch within 24 hours.");
         setFormData({ name: '', company: '', mobile: '', email: '', message: '' });
       },

@@ -27,3 +27,13 @@ export const trackClick = (buttonId, page = 'edtech') => {
     page,
   });
 };
+
+// Fires a Google Ads conversion event. gtag is loaded globally via index.html.
+export const trackGadsConversion = () => {
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', 'conversion', {
+    send_to: 'AW-16728027513/pF6vCNC61qQcEPnixag-',
+    value: 1.0,
+    currency: 'INR',
+  });
+};

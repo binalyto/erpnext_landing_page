@@ -13,7 +13,7 @@ const logos = [
 
 export default function EdtechSocialProof() {
   return (
-    <section className="bg-[#0B1120] border-y border-slate-800/60 py-12 sm:py-14">
+    <section id="social-proof" className="bg-[#0B1120] border-y border-slate-800/60 py-12 sm:py-14">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-[10px] text-slate-500 font-mono uppercase tracking-[0.25em] mb-8">
           Trusted By Leading Edtech Companies

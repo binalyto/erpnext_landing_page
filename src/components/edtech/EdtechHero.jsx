@@ -94,7 +94,7 @@ export default function EdtechHero() {
               We know how to make your sales team better with our World's Most Trusted Sales Suite — from first touch to payment collected.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            {/* <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="#contact"
                 onClick={() => trackClick('hero_transform_sales_process')}
@@ -104,14 +104,14 @@ export default function EdtechHero() {
                 <ArrowRight size={15} />
               </a>
               <a
-                href="#sales-suite"
+                href="#social-proof"
                 onClick={() => trackClick('hero_see_how_it_works')}
                 className="inline-flex items-center justify-center gap-1.5 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 font-semibold px-6 py-3.5 rounded-lg transition-all duration-200 text-sm"
               >
                 See How It Works
                 <ChevronRight size={15} />
               </a>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* ── Pipeline graphic ── */}

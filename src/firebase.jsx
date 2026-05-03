@@ -31,5 +31,5 @@ export const trackClick = (buttonId, page = 'edtech') => {
 // Fires a Google Ads conversion event. gtag is loaded globally via index.html.
 export const trackGadsConversion = () => {
   if (typeof window.gtag !== 'function') return;
-  window.gtag('event', 'conversion_event_default');
+  window.gtag('event', 'conversion_event_submit_lead_form');
 };
